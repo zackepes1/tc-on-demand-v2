@@ -26,7 +26,7 @@ export default async function Home() {
       </Button>
 
       <h1>Feed</h1>
-      <div className="grid grid-cols-4 h-full w-full gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 h-full w-full gap-5">
       {posts.map((post) => (
         <Post key={post.id} id={post.id} title={post.title} content={post.content} authorName={post.author.name}/>
       ))}
