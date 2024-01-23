@@ -10,10 +10,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { mutate } from 'swr';
 
 export default function AddPost(){
-    const [title, setTitle] = useState('');
+  const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const router = useRouter()
 
@@ -43,6 +44,7 @@ export default function AddPost(){
 
     setTitle('');
     setContent('');
+    mutate('/api/getPosts'); // <-- revalidate SWR cache here
   };
 
     return (
