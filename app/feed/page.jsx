@@ -20,7 +20,7 @@ async function getPosts(){
 export default async function Home() {
   const posts = await getPosts();
   return (
-    <main className="w-screen flex flex-col items-center justify-center">
+    <main className="w-screen h-full flex flex-col items-center justify-center">
       <Button>
       <Link href="/add-post">Add Post</Link>
       </Button>
